@@ -9,12 +9,15 @@ const SideBarAndHeader = () => {
   };
 
   return (
-    <div className={`antialiashed min-h-screen relative lg:flex`} x-data={`{ open: ${open} }`}>
+    <div className={`overflow-hidden antialiashed min-h-screen relative lg:flex`} x-data={`{ open: ${open} }`}>
       <nav
         className={`absolute inset-0 duration-300 ease-in lg:transform-none lg:opacity-100 transform ${open ? 'translate-x-0' : '-translate-x-full '} lg:relative z-10 w-72 bg-[#ece7e7] text-black h-screen p-3`}
       >
-        <div className='flex justify-between'>
-          <div className='font-bold text-2xl sm:text-3xl p-2'>sidebar</div>
+        
+  {/* Sidebar top section */}
+
+        <div className=' flex justify-between  border bg-[#a59191] rounded-lg p-1'>
+          <div className=' block font-bold  text-2xl sm:text-3xl p-2'>sidebar</div>
           <button
             className='p-2 focus:outline-none focus:bg-indigo-300 hover:bg-indigo-200 rounded-md lg:hidden'
             onClick={toggleOpen}
@@ -28,26 +31,34 @@ const SideBarAndHeader = () => {
             </svg>
           </button>
         </div>
-        <div className='mt-10 gap-3 border-1 bg-white rounded-lg shadow-md p-2'>
-          
+    
+    {/* Sidebar top section */}
+
+        <div className='mt-5 gap-3 border-1 bg-white rounded-2xl shadow-xl p-2'>
+
               <NavLink to='/' className={({isActive}) =>`mt-1 group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
 
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-6 h-6 text-inherit"><path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z"></path><path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
 
 
                   <h2 className='font-medium font-sans  '>Home Page</h2>
               </NavLink>
           
           
-              <NavLink to='/mainpage' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
+              <NavLink to='/mainpage' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"} duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
 
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
-                  </svg>
-                  <h2 className='font-medium font-sans  '>Main Page</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                </svg>
+
+                <h2 className='font-medium font-sans'>Main Page</h2>
+                
+
               </NavLink>
          
-              <NavLink to='/analytics' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
+              <NavLink to='/analytics' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"} duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
@@ -73,9 +84,75 @@ const SideBarAndHeader = () => {
 
                 <h2 className='font-medium font-sans  '>Settings</h2>
               </NavLink>
-          
-        </div>
-      </nav>
+      </div>
+    {/* Notification bar :(responsive)  */}
+
+        
+        <div className='mt-3 gap-3 border-1 bg-white rounded-lg shadow-xl p-2'>
+
+        <NavLink to='/mainpage' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>
+
+            <h2 className='font-medium font-sans  '>Receive updates</h2>
+        </NavLink>
+
+    <NavLink to='/analytics' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+    </svg>
+
+
+
+      <h2 className='font-medium font-sans   '>Feedback</h2>
+    </NavLink>
+
+    <NavLink to='/analytics' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+    </svg>
+
+
+
+      <h2 className='font-medium font-sans   '>Contact Us</h2>
+    </NavLink>
+    </div>
+    {/* End Notification bar :(responsive)  */}
+
+    {/* Login Signin bar */}
+    <div className='mt-3 gap-3 border-1 bg-white rounded-lg shadow-xl p-2'>
+
+        <NavLink to='/mainpage' className={({isActive}) =>`group relative flex items-center mb-2 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </svg>
+
+
+            <h2 className='font-medium font-sans  '>Log in</h2>
+        </NavLink>
+
+    <NavLink to='/analytics' className={({isActive}) =>`group relative flex items-center mb-1 gap-2 px-4 py-2.5  font-semibold text-bodydark1 transition-color ${isActive ? "bg-[#323131] text-white rounded-r-xl" : "text-bodydark1"}duration-500 ease-in-out hover:bg-[#323131] hover:text-gray-100 rounded-r-xl`}>
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+    </svg>
+
+
+      <h2 className='font-medium font-sans   '>Sign in</h2>
+    </NavLink>
+
+    </div>
+    {/* End Login Signin bar */}
+
+
+  </nav>
+
+  {/* Top Bar (responsive: done) */}
       <div className='relative z-0 lg:flex-grow'>
         <header className='flex bg-gray-700 text-white items-center'>
           <button
@@ -93,6 +170,9 @@ const SideBarAndHeader = () => {
           <span className='block text-2xl sm:text-3xl p-3'>BeanCounter</span>
         </header>
       </div>
+
+  {/* End Top Bar (responsive: done) */}
+    
     </div>
   );
 };
