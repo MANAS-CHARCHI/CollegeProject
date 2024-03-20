@@ -3,17 +3,16 @@ import React, { useState } from 'react';
 import {NavLink} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-// import { useOpen } from './OpenContext';
 
 const SideBarAndHeader = () => {
 
   // const { open, toggleOpen } = useOpen();
 
-  // const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  // const toggleOpen = () => {
-  //   setOpen(!open);
-  // };
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
 
   return (
     <div className={`overflow-hidden rounded-xl antialiashed min-h-screen relative lg:flex `} x-data={`{ open: ${open} }`}>
@@ -27,7 +26,7 @@ const SideBarAndHeader = () => {
           <div className=' block font-bold  text-2xl sm:text-3xl p-2'>sidebar</div>
           <button
             className='p-3 focus:outline-none focus:bg-indigo-200 hover:bg-indigo-50 rounded-md lg:hidden'
-            // onClick={toggleOpen}
+            onClick={toggleOpen}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-7 h-7">
               <path
@@ -153,7 +152,7 @@ const SideBarAndHeader = () => {
   </nav>
 
   {/* Top Bar (responsive: done) */}
-      {/* <div className='relative z-0  lg:flex-grow'>
+      <div className='relative z-0 w-full lg:flex-grow'>
         <header className='flex bg-gray-700 text-white flex-grow items-center'>
           <button
             className='p-3 focus:outline-none focus:bg-gray-600 hover:bg-gray-600 rounded-md lg:hidden'
@@ -171,7 +170,7 @@ const SideBarAndHeader = () => {
           
         </header>
         
-      </div> */}
+      </div>
 
   {/* End Top Bar (responsive: done) */}
     
