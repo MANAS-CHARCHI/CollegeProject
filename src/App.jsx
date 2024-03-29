@@ -9,15 +9,16 @@ import ContactUs from "./Components/ContactUs/ContactUs.jsx"
 import Feedback from "./Components/Feedback/FeedbackPage.jsx"
 import MainPage from "./Components/MainPage/mainPage.jsx"
 import ReceiveUpdates from "./Components/ReceiveUpdates/receiveUpdates.jsx"
-
+import Login from "./Components/Login/Login.jsx"
 
 
 function App() {
   return (
    <Router>
     <Routes>
+
       <Route path="/" element={<Layout/>}>
-        <Route path="/" element={<HomePage/>}/>
+        <Route path="/home" element={<HomePage/>}/>
         <Route path="/mainpage" element={<MainPage/>}/>
         <Route path="/analytics" element={<Analytics/>}/>
         <Route path="/aboutus" element={<AboutUs/>}/>
@@ -26,12 +27,12 @@ function App() {
         <Route path="/feedbackUs" element={<Feedback/>}/>
         <Route path="/contactUs" element={<ContactUs/>}/>
 
-        
-        <Route path="/logIn" element={<Authorization/>}/>
-        
+        <Route path="/login" element={<Login/>}/>   
       </Route>
     </Routes>
+    
    </Router>
+  
    
   )
 }
