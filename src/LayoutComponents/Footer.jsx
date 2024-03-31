@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <footer className="bg-[#f6f2ee] ">
+        <footer className="bg-[#dfddd9] ">
             <div className="mx-auto w-full max-w-screen-xl  py-2 lg:py-8">
                 
                 <hr className=" border-black sm:mx-8 md:m-4" />
@@ -16,7 +16,7 @@ export default function Footer() {
                         . All Rights Reserved.
                     </span>
                     <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                        <Link to="#" className="text-gray-500 hover:text-red-800">
+                        <Link to="#" className="text-gray-500 hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"

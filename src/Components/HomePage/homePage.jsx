@@ -29,31 +29,31 @@ const homePage=()=>{
             {/* Inbox data */}
 
                 <div className="bg-[#fcf0e3] rounded-3xl pt-2 text-center md:row-start-1 md:col-start-3 row-start-8 col-span-2  ">
-                    <div className="text-2xl font-sans text-[#013567]">Notifications</div>
+                    <div className="text-xl font-sans font-bold text-[#013567]">Notifications</div>
                 </div>
             
             {/* Expance variation graph */}
 
-                <div className="bg-[#eff6ff] md:row-span-2 md:col-span-1 row-span-2 rounded-3xl pt-44 col-span-2 text-center">
-                    EXPANCE VARIATIONS
+                <div className="bg-[#eff6ff] md:row-span-2 md:col-span-1 row-span-2 rounded-3xl pt-2 col-span-2 text-center">
+                <div className="text-xl font-sans text-[#013567] font-bold">Expenses Variations</div>
                 </div>
 
             {/* Net Income Bar graph */}
 
-                <div className="bg-pink-400 md:row-span-2 md:col-span-1 row-span-2 rounded-3xl pt-44 col-span-2 text-center">
-                    NET INCOME
+                <div className="bg-[#eff6ff] md:row-span-2 md:col-span-1 row-span-2 rounded-3xl pt-2 col-span-2 text-center">
+                <div className="text-xl font-sans font-bold text-[#013567]">Net Income</div>
                 </div>
             
             {/* Expences Total */}
 
-                <div className="bg-[#94c998]  rounded-3xl md:row-start-2 md:col-start-3 row-start-2 p-20 text-center ">
-                    EXPANCES
+                <div className="bg-[#eff6ff]  rounded-3xl md:row-start-2 md:col-start-3 row-start-2 p-7 text-left ">
+                <div className="text-xl font-sans font-bold text-[#013567]">Expenses</div>
                 </div>
             
             {/* Incomes Total */}
 
-                <div className="bg-red-400 rounded-3xl md:row-start-3 md:col-start-3 col-start-2 row-start-2 p-20 text-center">
-                    INCOMES
+                <div className="bg-[#eff6ff] rounded-3xl md:row-start-3 md:col-start-3 col-start-2 row-start-2 p-7 text-left">
+                <div className="text-xl font-sans font-bold text-[#013567]">Incomes</div>
                 </div>
             
         </div>
