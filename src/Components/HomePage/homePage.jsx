@@ -4,7 +4,7 @@ const homePage=()=>{
 
     return(
         <><div className="">
-        <div className="grid grid-cols-2 grid-rows-6  md:grid-cols-3 md:grid-rows-3   gap-3 pt-4">
+        <div className="grid grid-cols-2 grid-rows-7  md:grid-cols-3 md:grid-rows-3   gap-3 pt-1">
 
             {/* Welcome the user with users own name */}
                 <div
@@ -28,7 +28,7 @@ const homePage=()=>{
 
             {/* Inbox data */}
 
-                <div className="bg-[#fcf0e3] rounded-3xl pt-2 text-center md:row-start-1 md:col-start-3 row-start-8 col-span-2  ">
+                <div className="bg-[#fcf0e3] rounded-3xl pt-2 text-center md:row-start-1 md:col-start-3 row-start-7 col-span-2  ">
                     <div className="text-xl font-sans font-bold text-[#013567]">Notifications</div>
                 </div>
             
@@ -46,13 +46,14 @@ const homePage=()=>{
             
             {/* Expences Total */}
 
-                <div className="bg-[#eff6ff]  rounded-3xl md:row-start-2 md:col-start-3 row-start-2 p-7 text-left ">
-                <div className="text-xl font-sans font-bold text-[#013567]">Expenses</div>
+                <div className="bg-[#f9fafb]  rounded-3xl md:row-start-2 md:col-start-3 row-start-2 py-7 pl-4 text-left ">
+                    <div className="text-xl font-sans font-bold text-[#013567]">Expenses</div>
+                    <div className="pt-12 text-3xl font-sans font-bold text-[#013567]">₹10000/-</div>
                 </div>
             
             {/* Incomes Total */}
 
-                <div className="bg-[#eff6ff] rounded-3xl md:row-start-3 md:col-start-3 col-start-2 row-start-2 p-7 text-left">
+                <div className="bg-[#f9fafb]  rounded-3xl md:row-start-3 md:col-start-3 col-start-2 row-start-2 p-7 text-left">
                 <div className="text-xl font-sans font-bold text-[#013567]">Incomes</div>
                 </div>
             

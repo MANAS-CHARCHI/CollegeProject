@@ -14,7 +14,7 @@ function Layout() {
     <div className='bg-[#dfddd9]'>
     <Topbar/>
    <div className="flex min-h-screen ">
-        <div className=" mt-0 text-white fixed " > 
+        <div className=" mt-0 text-white fixed" > 
           <Sidebar />
         </div>
         <div className=" flex-grow mt-16 p-3 lg:ml-72  overflow-y-auto">
