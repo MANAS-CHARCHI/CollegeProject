@@ -24,7 +24,7 @@ const SideBarAndHeader = () => {
   return (
     <>
     {/* Top HamBurger icon when screen will small */}
-      <div className='w-72 '>
+      <div className={`${open ? 'w-72' : 'w-0 '}`}>
         <button className='p-2.5 mt-2  duration-300 ease-in ml-1 bg-[#395f84] focus:outline-none  hover:bg-[#506a83] rounded-2xl lg:hidden'
               onClick={toggleOpen}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-7 h-7">
@@ -37,11 +37,11 @@ const SideBarAndHeader = () => {
         </button>
       </div>
       
-{/* ${loginOnOff ? 'translate-x-0':'-translate-x-full'} */}
 
-    <div className={`overflow-hidden lg:mt-20  mt-5  rounded-xl antialiashed  min-h-screen relative lg:flex `} >
+
+    <div className={`overflow-hidden  lg:mt-20  mt-3  rounded-xl antialiashed  min-h-screen relative lg:flex `} >
       <nav
-        className={`absolute flex flex-col inset-0 duration-300 ease-in lg:transform-none lg:opacity-100 transform ${open ? 'translate-x-0' : '-translate-x-full '}  lg:relative z-10 lg:w-72  bg-[#dfddd9] text-black h-screen p-3`}
+        className={`absolute flex flex-col inset-0 duration-300 ease-in lg:transform-none lg:opacity-100 transform ${open ? 'translate-x-0' : '-translate-x-full '}  lg:relative z-10 md:w-72 bg-[#dfddd9] text-black h-screen p-3`}
       >
         
   {/* Sidebar top section */}

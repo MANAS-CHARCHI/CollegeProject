@@ -1,3 +1,11 @@
 Collected Resources from:
         1:-For Authorization:-(https://undraw.co/)
         2:- For Header and sidebar :- (heroicons.com/mini)
+
+npm install
+axios:- for http request througn frontend
+chart.js:- free JavaScript library for making HTML-based charts
+moment :- A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates
+react-chartjs-2 :- React components for Chart.js
+react-datepicker  :- imple React datepicker component for working with indian calendar
+styled-components :-CSS, styled-components allow you to write actual CSS code to style your components

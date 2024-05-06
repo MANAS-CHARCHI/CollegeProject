@@ -1,7 +1,8 @@
 import React from "react";
 import welcomeImage from "../Images/welcomepageimage.png"
+import { useGlobalContext } from '../../globalContext/globalContext'
 const homePage=()=>{
-
+    const {addIncome, incomes, getIncomes, deleteIncome, totalIncome, totalExpence, currentBalance}=useGlobalContext()
     return(
         <><div className="">
         <div className="grid grid-cols-2 grid-rows-7  md:grid-cols-3 md:grid-rows-3   gap-3 pt-1">
@@ -47,14 +48,15 @@ const homePage=()=>{
             {/* Expences Total */}
 
                 <div className="bg-[#f9fafb]  rounded-3xl md:row-start-2 md:col-start-3 row-start-2 py-7 pl-4 text-left ">
-                    <div className="text-xl font-sans font-bold text-[#013567]">Expenses</div>
-                    <div className="pt-12 text-3xl font-sans font-bold text-[#013567]">₹10000/-</div>
+                    <div className="text-xl font-sans font-bold text-[#013567]">Balance</div>
+                    <div className="pt-12 text-5xl font-sans font-bold text-[#013567]">₹<span>{currentBalance()}</span>/-</div>
                 </div>
             
             {/* Incomes Total */}
 
                 <div className="bg-[#f9fafb]  rounded-3xl md:row-start-3 md:col-start-3 col-start-2 row-start-2 p-7 text-left">
-                <div className="text-xl font-sans font-bold text-[#013567]">Incomes</div>
+                <div className="text-xl font-sans font-bold text-[#013567]">Expences</div>
+                <div className="pt-12 text-5xl font-sans font-bold text-[#013567]">₹<span>{totalExpence()}</span>/-</div>
                 </div>
             
         </div>

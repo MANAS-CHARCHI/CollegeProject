@@ -10,10 +10,12 @@ import Feedback from "./Components/Feedback/FeedbackPage.jsx"
 import MainPage from "./Components/MainPage/mainPage.jsx"
 import ReceiveUpdates from "./Components/ReceiveUpdates/receiveUpdates.jsx"
 import Login from "./Components/Login/Login.jsx"
+import { GlobalProvider } from "./globalContext/globalContext.jsx"
 
 
 function App() {
   return (
+    <GlobalProvider>
    <Router>
     <Routes>
 
@@ -32,6 +34,7 @@ function App() {
     </Routes>
     
    </Router>
+   </GlobalProvider>
   
    
   )
