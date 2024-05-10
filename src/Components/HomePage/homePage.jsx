@@ -1,6 +1,8 @@
 import React from "react";
 import welcomeImage from "../Images/welcomepageimage.png"
+import Charts from '../Charts/Charts'
 import { useGlobalContext } from '../../globalContext/globalContext'
+
 const homePage=()=>{
     const {addIncome, incomes, getIncomes, deleteIncome, totalIncome, totalExpence, currentBalance}=useGlobalContext()
     return(
@@ -23,7 +25,7 @@ const homePage=()=>{
                         }} 
                     className="bg-[#f2c6bd] border border-[#dda49c] col-span-2 md:col-span-2 p-20  rounded-3xl " >
                     <div className="text-2xl font-sans">Welcome</div>
-                    <div className="text-5xl font-sans font-bold ">Manas Charchi</div>
+                    <div className="text-5xl font-sans font-bold ">Team</div>
                     <div className="rounded-3xl text-[rgb(245,227,227)] bg-[#f5a998] w-28 mt-8 ml-4 text-center p-2.5 text-sm">Odisha, IN</div>
                 </div>
 
@@ -46,17 +48,17 @@ const homePage=()=>{
                 </div>
             
             {/* Expences Total */}
-
+                
                 <div className="bg-[#f9fafb]  rounded-3xl md:row-start-2 md:col-start-3 row-start-2 py-7 pl-4 text-left ">
                     <div className="text-xl font-sans font-bold text-[#013567]">Balance</div>
-                    <div className="pt-12 text-5xl font-sans font-bold text-[#013567]">₹<span>{currentBalance()}</span>/-</div>
+                    <div className="pt-12 text-4xl font-sans font-bold text-[#013567]">₹<span>{currentBalance()}</span>/-</div>
                 </div>
             
             {/* Incomes Total */}
 
                 <div className="bg-[#f9fafb]  rounded-3xl md:row-start-3 md:col-start-3 col-start-2 row-start-2 p-7 text-left">
                 <div className="text-xl font-sans font-bold text-[#013567]">Expences</div>
-                <div className="pt-12 text-5xl font-sans font-bold text-[#013567]">₹<span>{totalExpence()}</span>/-</div>
+                <div className="pt-12 text-4xl font-sans font-bold text-[#013567]">₹<span>{totalExpence()}</span>/-</div>
                 </div>
             
         </div>

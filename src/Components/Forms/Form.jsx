@@ -5,6 +5,7 @@ import { useGlobalContext } from '../../globalContext/globalContext'
 import swal from 'sweetalert2';
 import styled from 'styled-components'
 
+
 import 'react-datepicker/dist/react-datepicker.css'
 
 function Form() {
@@ -51,7 +52,12 @@ function Form() {
     
   return (
     <FormStyled onSubmit={handleSubmit}>
-    <div>
+
+
+
+    <div className=''>
+
+
       <input 
           type='text'
           value={title}
@@ -121,6 +127,7 @@ function Form() {
               </div>
              
     </div>
+  
     </FormStyled>
   )
 }
